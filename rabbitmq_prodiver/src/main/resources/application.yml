@@ -1,4 +1,3 @@
-
 server:
   port: 8021
 spring:
@@ -13,3 +12,8 @@ spring:
     password: guest
     #虚拟host 可以不设置,使用server默认host
     virtual-host: /
+    #确认消息已发送到交换机(Exchange)
+    #publisher-confirms: true
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
